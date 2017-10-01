@@ -1,0 +1,3 @@
+.ui.form .fields.attached-label {
+    flex-wrap: wrap;
+}

@@ -51,3 +51,109 @@
 @fourteenColumn : (1 / 14 * 100%);
 @fifteenColumn  : (1 / 15 * 100%);
 @sixteenColumn  : (1 / 16 * 100%);
+
+/*-------------------
+     Breakpoints
+--------------------*/
+
+@mobileBreakpoint            : 320px;
+@tabletBreakpoint            : 768px;
+@computerBreakpoint          : 1008px;
+@largeMonitorBreakpoint      : 1200px;
+@widescreenMonitorBreakpoint : 1920px;
+
+/*-------------------
+       Fonts
+--------------------*/
+
+@fontName          : 'Raleway, Trirong, Sriracha';
+@fontSmoothing     : antialiased;
+
+@headerFont        : @fontName, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+@pageFont          : @fontName, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+
+@googleFontName    : @fontName;
+@importGoogleFonts : true;
+@googleFontSizes   : '400,500,700';
+@googleSubset      : 'latin';
+
+@googleProtocol    : 'https://';
+@googleFontRequest : '@{googleFontName}:@{googleFontSizes}&subset=@{googleSubset}';
+
+/*-------------------
+      Base Sizes
+--------------------*/
+
+/* This is the single variable that controls them all */
+@emSize   : 16px;
+
+/* The size of page text  */
+@fontSize : 16px;
+
+
+/*-------------------
+    Border Radius
+--------------------*/
+
+/* See Power-user section below
+   for explanation of @px variables
+*/
+@relativeBorderRadius: @relative2px;
+@absoluteBorderRadius: @2px;
+
+@defaultBorderRadius: @absoluteBorderRadius;
+
+/*-------------------
+        Sizes
+--------------------*/
+
+/*
+  Sizes are all expressed in terms of 14px/em (default em)
+  This ensures these "ratios" remain constant despite changes in EM
+*/
+
+@miniSize        : (11 / 16);
+@tinySize        : (12 / 16);
+@smallSize       : (14 / 16);
+@mediumSize      : (16 / 16);
+@largeSize       : (18 / 16);
+@bigSize         : (20 / 16);
+@hugeSize        : (24 / 16);
+@massiveSize     : (28 / 16);
+
+/*-------------------
+       Em Sizes
+--------------------*/
+
+/*
+  This rounds @size values to the closest pixel then expresses that value in (r)em.
+  This ensures all size values round to exact pixels
+*/
+@mini            : unit( round(@miniSize * @emSize) / @emSize, rem);
+@tiny            : unit( round(@tinySize * @emSize) / @emSize, rem);
+@small           : unit( round(@smallSize * @emSize) / @emSize, rem);
+@medium          : unit( round(@mediumSize * @emSize) / @emSize, rem);
+@large           : unit( round(@largeSize * @emSize) / @emSize, rem);
+@big             : unit( round(@bigSize * @emSize) / @emSize, rem);
+@huge            : unit( round(@hugeSize * @emSize) / @emSize, rem);
+@massive         : unit( round(@massiveSize * @emSize) / @emSize, rem);
+
+/* em */
+@relativeMini    : unit( round(@miniSize * @emSize) / @emSize, em);
+@relativeTiny    : unit( round(@tinySize * @emSize) / @emSize, em);
+@relativeSmall   : unit( round(@smallSize * @emSize) / @emSize, em);
+@relativeMedium  : unit( round(@mediumSize * @emSize) / @emSize, em);
+@relativeLarge   : unit( round(@largeSize * @emSize) / @emSize, em);
+@relativeBig     : unit( round(@bigSize * @emSize) / @emSize, em);
+@relativeHuge    : unit( round(@hugeSize * @emSize) / @emSize, em);
+@relativeMassive : unit( round(@massiveSize * @emSize) / @emSize, em);
+
+/* rem */
+@absoluteMini    : unit( round(@miniSize * @emSize) / @emSize, rem);
+@absoluteTiny    : unit( round(@tinySize * @emSize) / @emSize, rem);
+@absoluteSmall   : unit( round(@smallSize * @emSize) / @emSize, rem);
+@absoluteMedium  : unit( round(@mediumSize * @emSize) / @emSize, rem);
+@absoluteLarge   : unit( round(@largeSize * @emSize) / @emSize, rem);
+@absoluteBig     : unit( round(@bigSize * @emSize) / @emSize, rem);
+@absoluteHuge    : unit( round(@hugeSize * @emSize) / @emSize, rem);
+@absoluteMassive : unit( round(@massiveSize * @emSize) / @emSize, rem);
