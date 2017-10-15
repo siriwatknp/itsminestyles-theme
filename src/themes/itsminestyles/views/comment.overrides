@@ -1,0 +1,5 @@
+.ui.comments.disabled {
+    .comment {
+        opacity: 0.6;
+    }
+}

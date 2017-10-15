@@ -1,0 +1,15 @@
+.ui.card.active {
+    box-shadow: @activeBoxShadow;
+}
+
+.ui.cards.stackable {
+    @media only screen and (max-width: @largestMobileScreen) {
+        margin-top: 0;
+    }
+}
+
+.ui.cards {
+    .ui.card.add-new {
+        cursor: pointer;
+    }
+}

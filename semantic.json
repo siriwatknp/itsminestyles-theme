@@ -67,8 +67,7 @@
     "api",
     "form",
     "state",
-    "visibility",
-    "headerWrapper"
+    "visibility"
   ],
   "version": "2.2.13"
 }

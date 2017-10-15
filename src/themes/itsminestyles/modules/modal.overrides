@@ -1,0 +1,10 @@
+.ui.modal {
+    .close-icon {
+        position: absolute;
+        top: 1.4rem;
+        right: 1.4rem;
+    }
+    .center {
+        text-align: center;
+    }
+}

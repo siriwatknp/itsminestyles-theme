@@ -104,6 +104,12 @@
 @defaultBorderRadius: @absoluteBorderRadius;
 
 /*-------------------
+      Borders
+--------------------*/
+
+@solidSelectedBorderColor  : #010101;
+
+/*-------------------
         Sizes
 --------------------*/
 
