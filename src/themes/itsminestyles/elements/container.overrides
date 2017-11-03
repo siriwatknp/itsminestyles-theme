@@ -1,3 +1,6 @@
 .header-wrapper {
   border-bottom: 1px solid #d5d5d5;
+  background: @white;
+  position: relative;
+  z-index: @zIndexHeaderWrapper;
 }

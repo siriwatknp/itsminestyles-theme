@@ -53,6 +53,14 @@
 @sixteenColumn  : (1 / 16 * 100%);
 
 /*-------------------
+     z-index
+--------------------*/
+@zIndexFilterAndOrderer: 990;
+@zIndexAccountPanel : 1000;
+@zIndexHeaderWrapper: 1010;
+@zIndexHistoryPane: 1100;
+
+/*-------------------
      Breakpoints
 --------------------*/
 
@@ -66,19 +74,27 @@
        Fonts
 --------------------*/
 
-@fontName          : 'Raleway, Trirong, Sriracha';
+@importGoogleFonts : true;
+
+@mainEngFontName      : Raleway;
+@googleMainEngFontSizes   : '400,500,700';
+
+@mainThaiFontName     : Trirong;
+@googleMainThaiFontSizes   : '400,500,700';
+
+@extraThaiFontName    : Sriracha;
+
+@googleProtocol    : 'https://';
+@googleMainEngRequest: '@{mainEngFontName}:@{googleMainEngFontSizes}';
+@googleMainThaiRequest: '@{mainThaiFontName}:@{googleMainThaiFontSizes}';
+
+@googleFontRequest : '@{googleMainEngRequest}|@{googleMainThaiRequest}|@{extraThaiFontName}';
+
+@fontName          : @mainEngFontName, @mainThaiFontName, @extraThaiFontName;
 @fontSmoothing     : antialiased;
 
 @headerFont        : @fontName, 'Helvetica Neue', Arial, Helvetica, sans-serif;
 @pageFont          : @fontName, 'Helvetica Neue', Arial, Helvetica, sans-serif;
-
-@googleFontName    : @fontName;
-@importGoogleFonts : true;
-@googleFontSizes   : '400,500,700';
-@googleSubset      : 'latin';
-
-@googleProtocol    : 'https://';
-@googleFontRequest : '@{googleFontName}:@{googleFontSizes}&subset=@{googleSubset}';
 
 /*-------------------
       Base Sizes

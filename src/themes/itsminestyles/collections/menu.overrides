@@ -1,0 +1,33 @@
+.ui.menu {
+    &.account-panel {
+        margin-bottom: 0px;
+        position: sticky;
+        top: 0;
+        z-index: @zIndexAccountPanel;
+        background: @white;
+        -webkit-overflow-scrolling: touch;
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        @media only screen and (max-width: @largestMobileScreen) {
+
+            &.pointing{
+                margin-left: -1em;
+                margin-right: -1em;
+                overflow-x: scroll;
+                border-bottom: none;
+                box-shadow: @floatingShadow;
+
+                .item {
+                    margin: 0;
+                    border-bottom: @secondaryPointingBorderWidth solid transparent;
+                    &.active {
+                        border-bottom-width: @secondaryPointingBorderWidth;
+                        border-bottom-color: @secondaryPointingActiveTextColor;
+                    }
+                }
+            }
+        }
+    }
+}

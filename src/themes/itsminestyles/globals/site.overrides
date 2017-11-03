@@ -1,0 +1,76 @@
+.reward-page {
+    position: relative;
+    .filter-and-orderer {
+        z-index: @zIndexFilterAndOrderer;
+        background: @white;
+    }
+}
+
+.page-wrapper {
+    @media only screen and (max-width: @largestMobileScreen) {
+        margin-top: 0px;
+    }
+}
+
+.history.pane {
+    z-index: @zIndexHistoryPane;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.pagination.container {
+    padding: 1rem 0;
+    text-align: center;
+    > li {
+        list-style: none;
+        display: inline-flex;
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+        &:hover, &.active-page {
+            background: @lightGrey;
+        }
+        &.disabled {
+            cursor: not-allowed;
+            opacity: 0.3;
+        }
+        > a {
+            cursor: pointer;
+            padding: .5rem .75rem;
+            border: 1px solid @borderColor;
+            border-radius: @defaultBorderRadius;
+            &:focus {
+                outline: 0;
+            }
+        }
+    }
+}
+
+.attribute-orderer.item {
+    @media only screen and (max-width: @largestMobileScreen) {
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0;
+        .ui.dropdown {
+            min-width: 8em;
+        }
+    }
+}
+
+.checkbox-grid {
+    .ui.checkbox {
+        margin-left: 1em;
+        @media only screen and (max-width: @largestMobileScreen) {
+            margin-left: 0;
+        }
+    }
+}
+
+.paper {
+    padding: 1rem;
+    box-shadow: @floatingShadow;
+
+}
