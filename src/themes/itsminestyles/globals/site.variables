@@ -58,6 +58,7 @@
 @zIndexFilterAndOrderer: 990;
 @zIndexAccountPanel : 1000;
 @zIndexHeaderWrapper: 1010;
+@zIndexErrorNotification: 1020;
 @zIndexHistoryPane: 1100;
 
 /*-------------------
