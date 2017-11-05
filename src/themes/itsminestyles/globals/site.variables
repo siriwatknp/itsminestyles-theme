@@ -120,6 +120,16 @@
 @defaultBorderRadius: @absoluteBorderRadius;
 
 /*-------------------
+    Brand Colors
+--------------------*/
+
+@primaryColor        : #FB7969;
+@secondaryColor      : #26A69A;
+
+@lightPrimaryColor   : #FCA196;
+@lightSecondaryColor : #67C1B8;
+
+/*-------------------
       Borders
 --------------------*/
 
