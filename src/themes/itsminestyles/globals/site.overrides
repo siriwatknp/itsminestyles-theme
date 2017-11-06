@@ -8,8 +8,8 @@
 
 .page-wrapper {
     @media only screen and (max-width: @largestMobileScreen) {
-        margin-top: 0px;
-        margin-bottom: 0px;
+        margin-top: 0px !important;
+        margin-bottom: 0px !important;
     }
 }
 
@@ -120,13 +120,16 @@
     }
 }
 
-.Login-page {
+.Login-page, .Sign-up-page {
     display: flex;
     justify-content: center;
     align-items: center;
     @media only screen and (max-width: @largestMobileScreen) {
         margin-left: -1rem;
         margin-right: -1rem;
+        .wrapper {
+            width: 100%;
+        }
     }
     @media only screen and (min-width: @tabletBreakpoint) {
         position: fixed;
