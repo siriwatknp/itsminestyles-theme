@@ -81,6 +81,9 @@
             padding: 0.5rem !important;
         }
     }
+    .ui.header {
+        color: @lightGrey;
+    }
     .history-header {
         padding: 0.5rem 1rem;
         margin: 0;
