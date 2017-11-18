@@ -1,0 +1,14 @@
+.ui.header.user-thumbnail {
+    .ui.image.circular {
+        height: 2.5em;
+        width: 2.5em;
+        object-fit: cover;
+    }
+    .content {
+        margin-top: 1em;
+
+        .sub.header {
+            margin-top: 0.5em;
+        }
+    }
+}

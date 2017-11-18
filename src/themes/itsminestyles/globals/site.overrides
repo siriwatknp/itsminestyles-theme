@@ -44,14 +44,28 @@
         &:not(:last-child) {
             margin-right: 10px;
         }
-        &:hover, &.active-page {
-            background: @lightGrey;
+        &.active-page {
+            a {
+                background: @primaryColor;
+                color: @white;
+                border-color: @primaryColor !important;
+                cursor: initial !important;
+            }
+        }
+        &:hover:not(.disabled, .active-page) {
+            a {
+                background: @lightPrimaryColor;
+                color: @white;
+            }
         }
         &.disabled {
             cursor: not-allowed;
             opacity: 0.3;
         }
         > a {
+            color: @primaryColor;
+            border: 1px solid @lightPrimaryColor !important;
+            background: @white;
             cursor: pointer;
             padding: .5rem .75rem;
             border: 1px solid @borderColor;
@@ -85,7 +99,51 @@
 
 .paper {
     padding: 1rem;
-    box-shadow: @floatingShadow;
+    &:not(.no-shadow) {
+        box-shadow: @floatingShadow;
+    }
+
+    &.pinky {
+        background: #DD5E89;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(-20deg, #DD5E89, #F7BB97);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(-20deg, #DD5E89, #F7BB97); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+
+    &.peach {
+        background: #ED4264;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(-20deg, #ED4264, #FFEDBC);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(-20deg, #ED4264, #FFEDBC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+
+    &.juicyPeach {
+        background: #fcb69f ;  /* fallback for old browsers */
+        background: linear-gradient(-20deg, #fcb69f 0%, #ffecd2 100%);
+    }
+}
+
+.user-information {
+    &.paper {
+        padding-bottom: 2em;
+    }
+    &.mobile-expanded {
+        @media only screen and (max-width: @largestMobileScreen) {
+            margin-left: -1rem;
+            margin-right: -1rem;
+        }
+    }
+    .ui.header.user-thumbnail {
+        clear: both;
+        display: block;
+        margin-bottom: 1.5em;
+    }
+    .ui.statistics {
+        margin-bottom: 0.5em !important;
+        .statistic {
+            .label {
+                font-size: 0.8em;
+            }
+        }
+    }
 }
 
 .divided-paper {

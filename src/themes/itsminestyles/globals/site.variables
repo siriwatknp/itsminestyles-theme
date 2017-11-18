@@ -60,6 +60,7 @@
 @zIndexHeaderWrapper: 1010;
 @zIndexErrorNotification: 1020;
 @zIndexHistoryPane: 1100;
+@zIndexDimmer: 1200;
 
 /*-------------------
      Breakpoints

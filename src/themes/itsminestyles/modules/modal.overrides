@@ -1,8 +1,16 @@
 .ui.modal {
+    .actions > .button.fluid {
+        margin-left: 0;
+    }
     .close-icon {
         position: absolute;
-        top: 1.4rem;
-        right: 1.4rem;
+        top: 1rem;
+        right: 1rem;
+
+        @media only screen and (min-width: @tabletBreakpoint){
+            top: 1.4rem;
+            right: 1.4rem;
+        }
     }
     .center {
         text-align: center;
