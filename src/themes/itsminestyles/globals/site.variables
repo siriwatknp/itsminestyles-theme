@@ -135,7 +135,7 @@
       Borders
 --------------------*/
 
-@solidSelectedBorderColor  : #010101;
+@solidSelectedBorderColor  : @primaryColor;
 
 /*-------------------
         Sizes

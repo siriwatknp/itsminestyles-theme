@@ -237,3 +237,20 @@
         }
     }
 }
+
+.Profile-page {
+    .address-form-controller {
+        margin: 1rem 0;
+    }
+}
+
+.address-form-controller {
+
+    .address-form {
+        margin-top: 1rem;
+
+        .ui.form .fields {
+            margin-bottom: 1em;
+        }
+    }
+}

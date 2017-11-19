@@ -1,7 +1,0 @@
-@activeShadowBoxShadow: 0px @shadowDistance 3px 0px @solidSelectedBorderColor;
-
-@activeBorderShadow: 0px 0px 0px @borderWidth @solidSelectedBorderColor;
-@activeBoxShadow:
-  @activeShadowBoxShadow,
-  @activeBorderShadow
-;

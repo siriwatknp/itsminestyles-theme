@@ -2,6 +2,27 @@
     box-shadow: @activeBoxShadow;
 }
 
+.ui.card.address-card {
+    .content {
+        .name {
+            font-weight: bold;
+        }
+    }
+
+    .extra {
+        padding: 0;
+
+        .delete {
+            border-top-right-radius: 0;
+            box-shadow: none !important;
+            border-left: 1px solid @lightGrey;
+        }
+        .edit {
+            border-top-left-radius: 0;
+        }
+    }
+}
+
 .ui.cards.stackable {
     @media only screen and (max-width: @largestMobileScreen) {
         margin-top: 0;
