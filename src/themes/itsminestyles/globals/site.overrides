@@ -13,6 +13,14 @@
     }
 }
 
+.ui.header.empty-icon.empty-icon.empty-icon {
+    color: @lightGrey;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .history.pane {
     z-index: @zIndexHistoryPane;
     overflow-y: scroll;

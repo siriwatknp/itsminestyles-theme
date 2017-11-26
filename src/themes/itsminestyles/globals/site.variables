@@ -136,6 +136,7 @@
 --------------------*/
 
 @solidSelectedBorderColor  : @primaryColor;
+@lightBorderColor               : rgba(34, 36, 38, 0.08);
 
 /*-------------------
         Sizes

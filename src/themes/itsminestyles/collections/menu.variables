@@ -1,0 +1,6 @@
+@secondaryPointingBorderColor: @lightBorderColor;
+
+@secondaryPointingActiveBorderColor: @primaryColor;
+@secondaryPointingActiveTextColor: @primaryColor;
+@secondaryPointingActiveHoverBorderColor: @lightPrimaryColor;
+@secondaryPointingActiveHoverTextColor: @lightPrimaryColor;

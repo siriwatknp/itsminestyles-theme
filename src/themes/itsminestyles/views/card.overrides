@@ -1,16 +1,8 @@
-.ui.card.active {
-    box-shadow: @activeBoxShadow;
-}
-
-.ui.card.address-card {
-    .content {
-        .name {
-            font-weight: bold;
-        }
-    }
-
+.ui.card {
     .extra {
-        padding: 0;
+        &.actions {
+            padding: 0 !important;
+        }
 
         .delete {
             border-top-right-radius: 0;
@@ -23,6 +15,48 @@
     }
 }
 
+.ui.card.address-card {
+    .content {
+        .name {
+            font-weight: bold;
+        }
+    }
+}
+
+.ui.card.article-card {
+    overflow: hidden;
+
+    .content.title {
+        position: relative;
+        background-size: cover;
+        .header {
+            color: @white;
+            position: relative;
+            z-index: 1;
+            font-weight: 500;
+        }
+        .backdrop {
+            position: absolute;
+            z-index: 0;
+            background: rgba(0, 0, 0, 0.4);
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+        }
+    }
+    .content.detail {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        .meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+    }
+}
+
 .ui.cards.stackable {
     @media only screen and (max-width: @largestMobileScreen) {
         margin-top: 0;
@@ -30,6 +64,18 @@
 }
 
 .ui.cards {
+    @media only screen and (min-width: @tabletBreakpoint) {
+        &.two {
+            margin-left: -0.5em;
+            margin-right: -0.5em;
+
+            > .ui.card {
+                margin-left: 0.5em;
+                margin-right: 0.5em;
+                width: ~"calc(50% - 1em)";
+            }
+        }
+    }
     .ui.card.add-new {
         cursor: pointer;
     }
