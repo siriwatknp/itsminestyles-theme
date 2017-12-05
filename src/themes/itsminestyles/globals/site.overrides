@@ -13,6 +13,58 @@
     }
 }
 
+a.ui.text {
+    transition: color 0.2s;
+    cursor: pointer;
+    display: inline-block;
+
+    &:hover {
+        &.grey {
+            color: @lightGrey;
+        }
+        &.primary {
+            color: @lightPrimaryColor;
+        }
+        &.secondary {
+            color: @lightSecondaryColor;
+        }
+    }
+}
+.ui.text {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 400;
+    color: @black;
+
+    &.indent {
+        margin-left: 1rem;
+    }
+
+    &.bold {
+        font-weight: bold;
+    }
+
+    &.grey {
+        color: @grey;
+        &.lighter {
+            color: @lightGrey;
+        }
+    }
+    &.primary {
+        color: @primaryColor;
+        &.lighter {
+            color: @lightPrimaryColor;
+        }
+    }
+    &.secondary {
+        color: @secondaryColor;
+        &.lighter {
+            color: @lightSecondaryColor;
+        }
+    }
+}
+
 .ui.header.empty-icon.empty-icon.empty-icon {
     color: @lightGrey;
     min-height: 300px;
@@ -246,12 +298,6 @@
     }
 }
 
-.Profile-page {
-    .address-form-controller {
-        margin: 1rem 0;
-    }
-}
-
 .address-form-controller {
 
     .address-form {
@@ -259,6 +305,85 @@
 
         .ui.form .fields {
             margin-bottom: 1em;
+        }
+    }
+}
+
+.slick-slider.custom-slick-carousel {
+    .slick-arrow {
+        color: @lightPrimaryColor;
+        transition: 0.2s;
+        font-size: 1rem;
+        height: 100%;
+        width: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: @zIndexSlickCarouselArrow;
+
+        &:before {
+            display: none;
+        }
+        &:hover {
+            color: @primaryColor;
+        }
+        &.slick-prev {
+            left: 0;
+        }
+        &.slick-next {
+            right: 0;
+        }
+    }
+    .slick-list {
+
+        .slick-track {
+            .slick-slide {
+                /* Wrapper */
+            }
+        }
+    }
+    .slick-dots {
+        li {
+            button {
+                &:before {
+                    font-size: 0.5rem;
+                    color: @primaryColor;
+                }
+            }
+            &.slick-active {
+                &:before {
+                    color: @primaryColor;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &.arrow-outside {
+        .slick-arrow {
+            &.slick-prev {
+                left: -1.5rem;
+            }
+            &.slick-next {
+                right: -1.5rem;
+            }
+        }
+    }
+
+    &.overlap {
+        .slick-list {
+            .slick-track {
+                .slick-slide {
+                    margin-left: -4rem;
+                    &.slick-active {
+                        padding-right: 4rem !important;
+                        margin-left: 0;
+                    }
+                    &.last-slide:not(.slick-active) {
+                        padding-right: 0 !important;
+                    }
+                }
+            }
         }
     }
 }

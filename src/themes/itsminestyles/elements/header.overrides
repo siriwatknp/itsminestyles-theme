@@ -16,3 +16,24 @@
 .ui.header.no-margin {
     margin: 0 !important;
 }
+
+.ui.header.primary-header {
+    &.primary {
+        color: @primaryColor;
+
+        &.dividing {
+            border-bottom: 2px solid fade(@lightPrimaryColor, 60%);
+        }
+    }
+
+    a {
+        font-weight: 400;
+        background: transparent;
+        font-size: 1rem;
+        color: @lightSecondaryColor;
+        cursor: pointer;
+        &:hover {
+            color:@secondaryColor;
+        }
+    }
+}

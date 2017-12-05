@@ -55,6 +55,7 @@
 /*-------------------
      z-index
 --------------------*/
+@zIndexSlickCarouselArrow: 100;
 @zIndexFilterAndOrderer: 990;
 @zIndexAccountPanel : 1000;
 @zIndexHeaderWrapper: 1010;

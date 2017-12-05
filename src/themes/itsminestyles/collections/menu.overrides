@@ -31,3 +31,12 @@
         }
     }
 }
+
+.ui.pointing.secondary.vertical.menu {
+    a.item {
+        &:hover {
+            background: fade(@lightPrimaryColor, 10%);
+            color: @primaryColor;
+        }
+    }
+}

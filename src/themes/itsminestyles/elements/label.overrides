@@ -21,3 +21,15 @@ a.ui.label.capsule {
         }
     }
 }
+
+.ui.label {
+    &.primary {
+        color: @white;
+        background: @primaryColor;
+    }
+
+    &.secondary {
+        color: @white;
+        background: @secondaryColor;
+    }
+}

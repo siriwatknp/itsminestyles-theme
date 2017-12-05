@@ -1,11 +1,26 @@
-.article-item {
-    padding: 10px;
-    .ui.items .item .ui.medium.image {
-        width: 175px;
+.ui.items {
+    .item.article-item {
+        padding: 10px;
+
+        &.linked:hover {
+            cursor: pointer;
+            box-shadow: @floatingShadow;
+        }
+
+        .ui.image {
+            width: 100px;
+            @media only screen and (max-width: @largestTabletScreen) {
+                width: 120px;
+            }
+            @media only screen and (min-width: @computerBreakpoint) {
+                width: 160px;
+            }
+        }
+
+        .content .header {
+            font-size: @relativeMedium;
+        }
     }
-}
-.article-item > .ui.items .item .content .header {
-    font-size: @relativeMedium;
 }
 
 .ui.items > .item.reward-item {
