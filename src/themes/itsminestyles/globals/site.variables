@@ -1,3 +1,5 @@
+
+
 /*-------------------
         Grid
 --------------------*/
@@ -57,11 +59,23 @@
 --------------------*/
 @zIndexSlickCarouselArrow: 100;
 @zIndexFilterAndOrderer: 990;
-@zIndexAccountPanel : 1000;
+@zIndexSecondaryMenu: 995;
+@zIndexHorizontalScrollBar : 1000;
+@zIndexHorizontalScrollBarDummy: 1005;
 @zIndexHeaderWrapper: 1010;
 @zIndexErrorNotification: 1020;
 @zIndexHistoryPane: 1100;
 @zIndexDimmer: 1200;
+
+
+/*-------------------
+       Links
+--------------------*/
+
+@linkColor           : @primaryColor;
+@linkUnderline       : none;
+@linkHoverColor      : darken(saturate(@linkColor, 20), 15, relative);
+@linkHoverUnderline  : @linkUnderline;
 
 /*-------------------
      Breakpoints
@@ -76,28 +90,29 @@
 /*-------------------
        Fonts
 --------------------*/
-
 @importGoogleFonts : true;
 
-@mainEngFontName      : Raleway;
+@mainEngFontName      : Quicksand;
 @googleMainEngFontSizes   : '400,500,700';
 
-@mainThaiFontName     : Trirong;
+@mainThaiFontName     : Athiti;
 @googleMainThaiFontSizes   : '400,500,700';
 
 @extraThaiFontName    : Sriracha;
+@extraThaiFontName2    : Itim;
+@extraThaiFontName3    : Pattaya;
 
 @googleProtocol    : 'https://';
 @googleMainEngRequest: '@{mainEngFontName}:@{googleMainEngFontSizes}';
 @googleMainThaiRequest: '@{mainThaiFontName}:@{googleMainThaiFontSizes}';
 
-@googleFontRequest : '@{googleMainEngRequest}|@{googleMainThaiRequest}|@{extraThaiFontName}';
+@googleFontRequest : '@{googleMainEngRequest}|@{googleMainThaiRequest}|@{extraThaiFontName}|@{extraThaiFontName2}|@{extraThaiFontName3}';
 
-@fontName          : @mainEngFontName, @mainThaiFontName, @extraThaiFontName;
+@fontName          : @mainEngFontName, @mainThaiFontName;
 @fontSmoothing     : antialiased;
 
 @headerFont        : @fontName, 'Helvetica Neue', Arial, Helvetica, sans-serif;
-@pageFont          : @fontName, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+@pageFont          : @mainEngFontName, THSarabunNew, 'Helvetica Neue', Arial, Helvetica, sans-serif;
 
 /*-------------------
       Base Sizes
@@ -131,6 +146,8 @@
 
 @lightPrimaryColor   : #FCA196;
 @lightSecondaryColor : #67C1B8;
+
+@appBackground: #F8F8F8;
 
 /*-------------------
       Borders
@@ -193,3 +210,16 @@
 @absoluteBig     : unit( round(@bigSize * @emSize) / @emSize, rem);
 @absoluteHuge    : unit( round(@hugeSize * @emSize) / @emSize, rem);
 @absoluteMassive : unit( round(@massiveSize * @emSize) / @emSize, rem);
+
+/*--------------
+  Font Weight
+---------------*/
+
+@textHeaderWeight: 500;
+
+/*--------------
+  Page Heading
+---------------*/
+
+@headerFontWeight : @textHeaderWeight;
+

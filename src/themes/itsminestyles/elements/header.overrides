@@ -17,12 +17,18 @@
     margin: 0 !important;
 }
 
+.ui.header {
+    &.primary {
+        color: @primaryColor;
+    }
+}
+
 .ui.header.primary-header {
     &.primary {
         color: @primaryColor;
 
         &.dividing {
-            border-bottom: 2px solid fade(@lightPrimaryColor, 60%);
+            border-bottom: 1px solid fade(@lightPrimaryColor, 60%);
         }
     }
 
@@ -30,10 +36,10 @@
         font-weight: 400;
         background: transparent;
         font-size: 1rem;
-        color: @lightSecondaryColor;
+        color: @lightPrimaryColor;
         cursor: pointer;
         &:hover {
-            color:@secondaryColor;
+            color: @primaryColor;
         }
     }
 }

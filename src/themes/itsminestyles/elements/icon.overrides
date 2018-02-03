@@ -15,5 +15,5 @@
 }
 
 .icon.active {
-    color: @blue;
+    color: @primaryColor;
 }

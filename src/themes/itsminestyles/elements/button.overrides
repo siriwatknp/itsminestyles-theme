@@ -4,3 +4,16 @@
     }
 
 }
+
+.ui.primary.buttons .button {
+  background-color: @lightPrimaryColor;
+}
+
+.ui.button.google {
+    background-color: @white;
+    box-shadow: @floatingShadow;
+}
+
+.ui.button.facebook {
+    box-shadow: @floatingShadow;
+}

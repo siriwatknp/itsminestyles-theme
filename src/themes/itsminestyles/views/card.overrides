@@ -1,3 +1,11 @@
+a.ui.card {
+    transition: 0.3s;
+    &:hover {
+        @media only screen and (max-width: @largestMobileScreen) {
+            transform: none;
+        }
+    }
+}
 .ui.card {
     &.raised:hover {
         box-shadow: @raisedShadow !important;
@@ -51,6 +59,7 @@
         border-top-left-radius: @defaultBorderRadius;
         border-top-right-radius: @defaultBorderRadius;
         min-height: 9rem;
+        max-height: 175px;
         position: relative;
         background-size: cover;
         .header {
@@ -94,6 +103,54 @@
     }
 }
 
+.ui.card.article-card2 {
+    overflow: hidden;
+
+    &.vertical {
+        flex-direction: column;
+        .cover-photo {
+            width: 100%;
+        }
+    }
+    @media only screen and (min-width: @computerBreakpoint) {
+        flex-direction: row;
+    }
+
+    .cover-photo {
+        height: 120px;
+        @media only screen and (min-width: @tabletBreakpoint) {
+            height: 150px;
+        }
+        @media only screen and (min-width: @computerBreakpoint) {
+            width: 220px;
+            height: 200px;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .content.body {
+        border-top: 0;
+        display: flex;
+        flex-grow: 0;
+        flex: 1;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &:after {
+            display: none;
+        }
+
+        .header {
+            font-weight: 500;
+            font-size: 1rem;
+        }
+    }
+}
+
 .ui.cards.stackable {
     @media only screen and (max-width: @largestMobileScreen) {
         margin-top: 0;
@@ -121,5 +178,112 @@
     }
     .ui.card.add-new {
         cursor: pointer;
+    }
+}
+
+
+/*******************************
+        Update 28/01/18
+*******************************/
+.ui.card.custom-card {
+    overflow: hidden;
+
+    &.show-description {
+        .floated-description {
+            opacity: 0;
+            transition: 0.3s;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            color: @black;
+            line-height: 1.5;
+            font-weight: 700;
+
+            &:hover {
+                opacity: 1;
+                background: fade(@white, 92%)
+            }
+        }
+    }
+
+    &.vertical {
+        flex-direction: column;
+        .cover-photo {
+            width: 100%;
+        }
+    }
+    @media only screen and (min-width: @computerBreakpoint) {
+        min-width: 420px;
+        flex-direction: row;
+    }
+
+    .cover-photo {
+        height: 120px;
+        position: relative;
+        @media only screen and (min-width: @tabletBreakpoint) {
+            height: 150px;
+        }
+        @media only screen and (min-width: @computerBreakpoint) {
+            width: 200px;
+            height: 200px;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .content.body {
+        border-top: 0;
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &:after {
+            display: none;
+        }
+
+        .header {
+            font-weight: 500;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    &.reward {
+        .cover-photo {
+            .label {
+                position: absolute;
+                top: 1rem;
+                left: 1rem;
+            }
+        }
+        .content.body {
+            .me.avatar {
+                @media only screen and (max-width: @largestMobileScreen) {
+                    text-align: center;
+                    .image {
+                        width: 1.75em;
+                        height: 1.75em;
+                    }
+                    .detail .title {
+                        font-size: 1.25rem;
+                        line-height: 1.25;
+                    }
+                }
+                .detail {
+                    .title {
+                        font-size: 1.5rem;
+                        line-height: 1.5;
+                    }
+                }
+            }
+        }
     }
 }

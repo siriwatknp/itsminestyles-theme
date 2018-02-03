@@ -1,3 +1,45 @@
+/*******************************
+        Global Overrides
+*******************************/
+// Custom font still be the issues on
+// https://github.com/Semantic-Org/Semantic-UI/issues/2358
+
+@import url("../themes/itsminestyles/assets/fonts/thsarabunnew.css");
+
+a:hover {
+    cursor: pointer;
+}
+
+.light-grey {
+    color: @lightGrey !important;
+}
+
+.light-primary {
+    color: @lightPrimaryColor !important;
+}
+
+.drag-handle {
+    cursor: move;
+}
+
+/*******************************
+        Article Components
+*******************************/
+.paragraph-component {
+    margin: 0;
+    padding: 0.75rem 0 1.5rem;
+}
+
+.list-component {
+    margin: 0;
+    padding: 0.75rem 0 1.5rem 2rem;
+    li {
+        padding: 0.5rem 0;
+    }
+}
+
+/******************************/
+
 .reward-page {
     position: relative;
     .filter-and-orderer {
@@ -6,7 +48,18 @@
     }
 }
 
+.me.main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    .page-wrapper {
+        flex: 1;
+    }
+}
+
 .page-wrapper {
+    background: @appBackground;
     @media only screen and (max-width: @largestMobileScreen) {
         margin-top: 0px !important;
         margin-bottom: 0px !important;
@@ -17,6 +70,7 @@ a.ui.text {
     transition: color 0.2s;
     cursor: pointer;
     display: inline-block;
+    color: @primaryColor;
 
     &:hover {
         &.grey {
@@ -33,8 +87,6 @@ a.ui.text {
 .ui.text {
     display: inline-block;
     text-decoration: none;
-    font-size: 1em;
-    font-weight: 400;
     color: @black;
 
     &.indent {
@@ -82,7 +134,7 @@ a.ui.text {
     }
 
     .history-empty {
-        position: absolute;
+        min-height: 300px;
         width: 100%;
         height: 100%;
         top: 0;
@@ -91,6 +143,10 @@ a.ui.text {
         align-items: center;
         .ui.header {
             color: @lightGrey;
+        }
+
+        &.fixed {
+            position: absolute;
         }
     }
 }
@@ -159,8 +215,28 @@ a.ui.text {
 
 .paper {
     padding: 1rem;
+    background: @white;
+    border-radius: @defaultBorderRadius;
+
+    @media only screen and (max-width: @largestMobileScreen) {
+        border-left: 0 !important;
+        border-right: 0 !important;
+    }
+
+    &:not(.no-border) {
+        border: 1px solid @borderColor;
+    }
     &:not(.no-shadow) {
         box-shadow: @floatingShadow;
+    }
+
+    &.expand-mobile {
+        @media only screen and (max-width: @largestMobileScreen) {
+            margin-left: -1rem !important;
+            margin-right: -1rem !important;
+            border-left: 0 !important;
+            border-right: 0 !important;
+        }
     }
 
     &.pinky {
@@ -386,4 +462,177 @@ a.ui.text {
             }
         }
     }
+}
+
+.article-cover {
+    max-height: 300px;
+    overflow: hidden;
+    position: relative;
+
+    .title-backdrop {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        padding: 1rem;
+        background: fade(@black, 50%)
+    }
+    .image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.article-provider {
+    .article-controller-bar {
+        margin: 0 -1rem;
+    }
+}
+
+.large-header.ui.menu {
+    .right.menu {
+        align-items: center;
+    }
+}
+
+.account-navigator {
+    position: relative;
+    cursor: pointer;
+
+    &:after {
+        content: ' ';
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 1rem;
+        bottom: -1rem;
+    }
+
+    .ui.menu.menu {
+        visibility: visible;
+        position: absolute;
+        top: 42px;
+        right: 0;
+        margin-top: 1rem;
+        transition: 0.3s;
+
+        .item {
+            margin: 0;
+        }
+
+        &.hidden {
+            visibility: hidden;
+            opacity: 0;
+        }
+    }
+}
+
+.topic-header-menu.menu {
+    align-items: center;
+
+    .more-topics {
+        &:after {
+            content: ' ';
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 1rem;
+            bottom: -1rem;
+        }
+
+        .ui.menu.menu {
+            visibility: visible;
+            position: absolute;
+            top: 42px;
+            margin-top: 1rem;
+            transition: 0.3s;
+
+            .item {
+                margin: 0;
+            }
+
+            &.hidden {
+                visibility: hidden;
+                opacity: 0;
+            }
+        }
+    }
+}
+
+.mobile-header.ui.menu {
+    margin: 0 !important;
+    .logo {
+        flex: 1;
+        justify-content: center;
+
+        .item {
+            padding: 0;
+
+            img {
+                width: auto;
+                max-height: 2rem;
+            }
+        }
+    }
+}
+
+.ui.image.social {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 2.5em;
+    height: 2.5em;
+    &.empty {
+        opacity: 0.4;
+    }
+}
+
+.me.social {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3em;
+    height: 3em;
+
+    &.inactive {
+        cursor: initial;
+        color: @lightGrey;
+    }
+}
+
+.me.social-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.Account-page {
+    .ui.container:not(.mobile-profile) {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    .ui.pointing.menu.horizontal-scrollbar {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+}
+
+.Articles-page {
+    .ui.pointing.menu.horizontal-scrollbar {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .ui.stackable.cards {
+        margin: 0 !important;
+    }
+}
+
+.me.footer {
+    border-top: 1px solid @borderColor;
+    min-height: 150px;
+    background: @white;
 }

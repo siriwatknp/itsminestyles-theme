@@ -1,0 +1,5 @@
+.ui.checkbox {
+    label {
+        font-weight: @checkboxLabelWeight;
+    }
+}
