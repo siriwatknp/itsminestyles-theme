@@ -1,3 +1,11 @@
-/*******************************
-    User Variable Overrides
-*******************************/
+@mobileItemSpacing: 1em;
+
+/* Image Size */
+@miniWidth: 65px;
+@tinyWidth: 80px;
+@smallWidth: 150px;
+@mediumWidth: 300px;
+@largeWidth: 450px;
+@bigWidth: 600px;
+@hugeWidth: 800px;
+@massiveWidth: 960px;

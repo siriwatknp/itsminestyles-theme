@@ -1,6 +1,0 @@
-.ui.indicating.progress.custom {
-  .bar {
-    background-color: @primaryColor;
-    color: @white;
-  }
-}

@@ -1,7 +1,0 @@
-.ui.dimmer {
-    z-index: @zIndexDimmer;
-}
-
-.ui.inverted.dimmer {
-    background: transparent;
-}

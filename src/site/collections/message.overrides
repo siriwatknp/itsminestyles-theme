@@ -1,3 +1,14 @@
-/*******************************
-        Site Overrides
-*******************************/
+.error-notification {
+    position: fixed;
+    top: 61px;
+    margin: 0 1rem;
+    z-index: @zIndexErrorNotification;
+
+    @media only screen and (min-width: @tabletBreakpoint) {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -114px;
+        margin: 0px;
+    }
+}

@@ -1,3 +1,123 @@
 /*******************************
      User Global Variables
 *******************************/
+
+/*-------------------
+        Grid
+--------------------*/
+
+@columnCount: 12;
+
+
+/*-------------------
+        z-index
+--------------------*/
+
+@zIndexSlickCarouselArrow: 100;
+@zIndexFilterAndOrderer: 990;
+@zIndexSecondaryMenu: 995;
+@zIndexHorizontalScrollBar : 1000;
+@zIndexHorizontalScrollBarDummy: 1005;
+@zIndexHeaderWrapper: 1010;
+@zIndexErrorNotification: 1020;
+@zIndexHistoryPane: 1100;
+@zIndexDimmer: 1200;
+
+/*-------------------
+       Links
+--------------------*/
+
+@linkColor           : @primaryColor;
+@linkUnderline       : none;
+@linkHoverColor      : darken(saturate(@linkColor, 20), 15, relative);
+@linkHoverUnderline  : @linkUnderline;
+
+/*-------------------
+     Breakpoints
+--------------------*/
+
+@mobileBreakpoint            : 320px;
+@tabletBreakpoint            : 768px;
+@computerBreakpoint          : 1008px;
+@largeMonitorBreakpoint      : 1200px;
+@widescreenMonitorBreakpoint : 1920px;
+
+/*-------------------
+       Fonts
+--------------------*/
+@importGoogleFonts : true;
+
+@mainEngFontName      : Quicksand;
+@googleMainEngFontSizes   : '400,500,700';
+
+@mainThaiFontName     : Athiti;
+@googleMainThaiFontSizes   : '400,500,700';
+
+@extraThaiFontName    : Sriracha;
+@extraThaiFontName2    : Itim;
+@extraThaiFontName3    : Pattaya;
+
+@googleProtocol    : 'https://';
+@googleMainEngRequest: '@{mainEngFontName}:@{googleMainEngFontSizes}';
+@googleMainThaiRequest: '@{mainThaiFontName}:@{googleMainThaiFontSizes}';
+
+@googleFontRequest : '@{googleMainEngRequest}|@{googleMainThaiRequest}|@{extraThaiFontName}|@{extraThaiFontName2}|@{extraThaiFontName3}';
+
+@fontName          : @mainEngFontName, @mainThaiFontName;
+@fontSmoothing     : antialiased;
+
+@headerFont        : @fontName, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+@pageFont          : @mainEngFontName, THSarabunNew, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+
+/*-------------------
+      Base Sizes
+--------------------*/
+/* This is the single variable that controls them all */
+@emSize   : 16px;
+
+/* The size of page text  */
+@fontSize : 16px;
+
+
+/*-------------------
+    Border Radius
+--------------------*/
+
+/* See Power-user section below
+   for explanation of @px variables
+*/
+@relativeBorderRadius: @relative2px;
+@absoluteBorderRadius: @2px;
+
+@defaultBorderRadius: @absoluteBorderRadius;
+
+/*-------------------
+    Brand Colors
+--------------------*/
+
+@primaryColor        : #FB7969;
+@secondaryColor      : #26A69A;
+
+@lightPrimaryColor   : #FCA196;
+@lightSecondaryColor : #67C1B8;
+
+@appBackground: #F8F8F8;
+
+/*-------------------
+      Borders
+--------------------*/
+
+@solidSelectedBorderColor  : @primaryColor;
+@lightBorderColor               : rgba(34, 36, 38, 0.08);
+
+/*--------------
+  Font Weight
+---------------*/
+
+@textHeaderWeight: 500;
+
+/*--------------
+  Page Heading
+---------------*/
+
+@headerFontWeight : @textHeaderWeight;

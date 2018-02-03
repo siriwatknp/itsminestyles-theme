@@ -1,3 +1,9 @@
-/*******************************
-         Site Overrides
-*******************************/
+.ui.form .fields.attached-label {
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.ui.form textarea {
+    font-family: @pageFont;
+
+}

@@ -1,3 +1,22 @@
-/*******************************
-         Site Overrides
-*******************************/
+.ui.segment.author {
+    .ui.statistics {
+        margin-bottom: 0;
+        justify-content: center;
+        .ui.statistic {
+            &:first-child {
+                margin-left: 0;
+                margin-bottom: 1em;
+            }
+
+            .label {
+                font-size: @relative14px;
+                color: @lightPrimaryColor;
+            }
+
+            .value {
+                font-size: @absoluteLarge;
+                color: @primaryColor;
+            }
+        }
+    }
+}

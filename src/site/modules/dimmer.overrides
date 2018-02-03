@@ -1,3 +1,7 @@
-/*******************************
-        User Overrides
-*******************************/
+.ui.dimmer {
+    z-index: @zIndexDimmer;
+}
+
+.ui.inverted.dimmer {
+    background: transparent;
+}

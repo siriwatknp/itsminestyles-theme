@@ -1,3 +1,19 @@
-/*******************************
-         Site Overrides
-*******************************/
+.icon.notification {
+    position: relative;
+
+    .ui.label {
+        font-family: @pageFont;
+        font-size: 12px;
+        width: 19px;
+        height: 19px;
+        top: -0.5em;
+        left: 120%;
+        padding: 0.3em !important;
+        min-width: auto;
+        min-height: auto;
+    }
+}
+
+.icon.active {
+    color: @primaryColor;
+}

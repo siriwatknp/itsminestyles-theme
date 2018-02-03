@@ -1,3 +1,11 @@
-/*******************************
-    User Variable Overrides
-*******************************/
+/* Site Variables */
+@floatingShadow:
+  0px 2px 4px 0px fade(@primaryColor, 50%),
+  0px 2px 10px 0px fade(@primaryColor, 50%)
+;
+
+/* Raised */
+@raisedShadow:
+  0px 0px 0px @borderWidth @primaryColor,
+  @floatingShadow
+;

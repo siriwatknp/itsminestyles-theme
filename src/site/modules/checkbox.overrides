@@ -1,3 +1,5 @@
-/*******************************
-         Site Overrides
-*******************************/
+.ui.checkbox {
+    label {
+        font-weight: @checkboxLabelWeight;
+    }
+}
