@@ -67,7 +67,7 @@
 @fontSmoothing     : antialiased;
 
 @headerFont        : @fontName, 'Helvetica Neue', Arial, Helvetica, sans-serif;
-@pageFont          : @mainEngFontName, THSarabunNew, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+@pageFont          : @mainEngFontName, 'Helvetica Neue', Arial, Helvetica, sans-serif;
 
 /*-------------------
       Base Sizes
@@ -100,6 +100,8 @@
 
 @lightPrimaryColor   : #FCA196;
 @lightSecondaryColor : #67C1B8;
+
+@lightPrimaryColorHover : saturate(darken(@lightPrimaryColor, 5), 10, relative);
 
 @appBackground: #F8F8F8;
 

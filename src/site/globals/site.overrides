@@ -2,23 +2,103 @@
          Site Overrides
 *******************************/
 
-@import url("../themes/itsminestyles/assets/fonts/thsarabunnew.css");
-
-a:hover {
-  cursor: pointer;
-}
-
-.light-grey {
-  color: @lightGrey !important;
-}
-
-.light-primary {
-  color: @lightPrimaryColor !important;
-}
+//@import url("../themes/itsminestyles/assets/fonts/thsarabunnew.css");
 
 .drag-handle {
   cursor: move;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
+
+a.ui.text {
+  transition: color 0.2s;
+  cursor: pointer;
+  display: inline-block;
+  color: @primaryColor;
+
+  &:hover {
+    color: @primaryColorHover;
+  }
+  &.lighter {
+    color: @lightPrimaryColor;
+    &:hover {
+      color: @lightPrimaryColorHover;
+    }
+  }
+
+  &.grey {
+    color: @grey;
+    &:hover {
+      color: @greyHover;
+    }
+    &.lighter {
+      color: @lightGrey;
+      &:hover {
+        color: @lightGreyHover;
+      }
+    }
+  }
+
+  &.disabled {
+    color: @disabledTextColor;
+    pointer-events: none;
+  }
+}
+.ui.text {
+  transition: color 0.2s;
+  display: inline-block;
+  text-decoration: none;
+  color: @black;
+
+  &.indent {
+    margin-left: 1rem;
+  }
+
+  &.underline {
+    text-decoration: underline;
+  }
+
+  &.bold {
+    font-weight: bold;
+  }
+
+  &.grey {
+    color: @grey;
+    &.lighter {
+      color: @lightGrey;
+    }
+  }
+  &.primary {
+    color: @primaryColor;
+    &.lighter {
+      color: @lightPrimaryColor;
+    }
+  }
+  &.secondary {
+    color: @secondaryColor;
+    &.lighter {
+      color: @lightSecondaryColor;
+    }
+  }
+
+  &.disabled {
+    color: @disabledTextColor;
+    cursor: not-allowed;
+  }
+}
+
+.ui.header.empty-badge.empty-badge.empty-badge {
+  color: @greyFocus;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+/*******************************
+--------------------------------
+*******************************/
 
 /*******************************
         Article Components
@@ -62,65 +142,6 @@ a:hover {
     margin-top: 0px !important;
     margin-bottom: 0px !important;
   }
-}
-
-a.ui.text {
-  transition: color 0.2s;
-  cursor: pointer;
-  display: inline-block;
-  color: @primaryColor;
-
-  &:hover {
-    &.grey {
-      color: @lightGrey;
-    }
-    &.primary {
-      color: @lightPrimaryColor;
-    }
-    &.secondary {
-      color: @lightSecondaryColor;
-    }
-  }
-}
-.ui.text {
-  display: inline-block;
-  text-decoration: none;
-  color: @black;
-
-  &.indent {
-    margin-left: 1rem;
-  }
-
-  &.bold {
-    font-weight: bold;
-  }
-
-  &.grey {
-    color: @grey;
-    &.lighter {
-      color: @lightGrey;
-    }
-  }
-  &.primary {
-    color: @primaryColor;
-    &.lighter {
-      color: @lightPrimaryColor;
-    }
-  }
-  &.secondary {
-    color: @secondaryColor;
-    &.lighter {
-      color: @lightSecondaryColor;
-    }
-  }
-}
-
-.ui.header.empty-icon.empty-icon.empty-icon {
-  color: @lightGrey;
-  min-height: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .history.pane {
